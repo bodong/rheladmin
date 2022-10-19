@@ -1,0 +1,15 @@
+[Unit]
+Description=Simple app
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/node /home/student/myapp/app.js
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+RestartSec=30s
+
+[Install]
+WantedBy=multi-user.target
+

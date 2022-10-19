@@ -14,7 +14,7 @@
 - Use root : `sudo -i` or `su -`
 - Go to service : `cd /usr/lib/systemd/system`
 - Copy and rename existing service: `cp /usr/lib/systemd/system/crond.service /usr/lib/systemd/system/myapp.service`
-- Update the content, you can refer to myapp.service in this repo
+- Update the content, you can refer to myapp.service in this repo, make sure you point the app.js location correctly, in this scenario, my app is in this location `/home/student/myapp/app.js`
 - Verify service : `systemctl status myapp`
 - Enable service : `systemctl enable myapp`
 - Reload daemon : `systemctl daemon-reload`
